@@ -3,6 +3,10 @@ FROM python:3.9-alpine
 
 # Install dependencies (git, pytest, etc.)
 RUN apk add --no-cache git && \
+    docker \
+    bash \
+    curl \
+    && rm -rf /var/cache/apk/*
     pip install pytest requests
 
 # Clone the Git repository containing your tests
