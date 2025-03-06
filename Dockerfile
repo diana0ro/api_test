@@ -22,5 +22,5 @@ VOLUME /var/run/docker.sock
 
 # The default command for Jenkins or CI will run pytest automatically
 # This will execute pytest to run the tests in the 'tests' directory by default
-CMD ["pytest", "tests"]
+CMD ["pytest"]
 
