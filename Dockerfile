@@ -1,13 +1,6 @@
 # Start with an official Python image
 FROM python:3.9-slim
 
-# Install dependencies for Docker-in-Docker (optional, if Jenkins is running inside Docker and needs to access Docker)
-RUN apt-get update && apt-get install -y \
-    curl \
-    docker.io \
-    bash \
-    && rm -rf /var/lib/apt/lists/*
-
 # Install pytest and requests using pip
 RUN pip install --no-cache-dir pytest requests
 

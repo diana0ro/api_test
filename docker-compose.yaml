@@ -1,6 +1,12 @@
-version: "3.9"
+version: '3.9'
+
 services:
   web:
-    image: nginx:latest
+    image: server
     ports:
-      - "8080:80"
+      - "80:8080"
+  
+  test:
+    image: my-test-image
+    depends_on:
+      - inspiring_hamilton
